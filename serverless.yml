@@ -76,12 +76,15 @@ functions:
   getStarWarsData:
     handler: handler.getStarWarsData
     events:
-      - httpApi: 'GET /personajes/{id}'
-
+      - http:
+          path: personajes/{id}
+          method: get
   createModel:
     handler: handler.createModel
     events:
-      - httpApi: 'POST /personajes'
+      - http:
+          path: personajes
+          method: post
 plugins:
   - serverless-auto-swagger
   - serverless-dynamodb-local

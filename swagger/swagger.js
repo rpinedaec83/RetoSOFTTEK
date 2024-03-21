@@ -5,7 +5,53 @@
     "title": "reto-softnet",
     "version": "1"
   },
-  "paths": {},
+  "paths": {
+    "/personajes/{id}": {
+      "get": {
+        "summary": "getStarWarsData",
+        "description": "",
+        "operationId": "getStarWarsData.get.personajes/{id}",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        }
+      }
+    },
+    "/personajes": {
+      "post": {
+        "summary": "createModel",
+        "description": "",
+        "operationId": "createModel.post.personajes",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "200 response"
+          }
+        }
+      }
+    }
+  },
   "definitions": {},
   "securityDefinitions": {}
 };
